@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C16CA961CF1ACEE005065C7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C16CA951CF1ACED005065C7 /* ViewModel.swift */; };
 		8CD34D201CEB706B004ED523 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD34D1F1CEB706B004ED523 /* AppDelegate.swift */; };
 		8CD34D221CEB706B004ED523 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD34D211CEB706B004ED523 /* ViewController.swift */; };
 		8CD34D251CEB706B004ED523 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD34D231CEB706B004ED523 /* Main.storyboard */; };
@@ -14,6 +15,8 @@
 		8CD34D2A1CEB706B004ED523 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD34D281CEB706B004ED523 /* LaunchScreen.storyboard */; };
 		8CD34D351CEB706C004ED523 /* WebBrowserRCSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD34D341CEB706C004ED523 /* WebBrowserRCSampleTests.swift */; };
 		8CD34D401CEB706C004ED523 /* WebBrowserRCSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD34D3F1CEB706C004ED523 /* WebBrowserRCSampleUITests.swift */; };
+		8CD34D4E1CEB714F004ED523 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD34D4D1CEB714F004ED523 /* ReactiveCocoa.framework */; };
+		8CD34D501CEB715B004ED523 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD34D4F1CEB715B004ED523 /* Result.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C16CA951CF1ACED005065C7 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		8CD34D1C1CEB706B004ED523 /* WebBrowserRCSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebBrowserRCSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD34D1F1CEB706B004ED523 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CD34D211CEB706B004ED523 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,8 @@
 		8CD34D3B1CEB706C004ED523 /* WebBrowserRCSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebBrowserRCSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD34D3F1CEB706C004ED523 /* WebBrowserRCSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBrowserRCSampleUITests.swift; sourceTree = "<group>"; };
 		8CD34D411CEB706C004ED523 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CD34D4D1CEB714F004ED523 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		8CD34D4F1CEB715B004ED523 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CD34D501CEB715B004ED523 /* Result.framework in Frameworks */,
+				8CD34D4E1CEB714F004ED523 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +85,8 @@
 		8CD34D131CEB706B004ED523 = {
 			isa = PBXGroup;
 			children = (
+				8CD34D4F1CEB715B004ED523 /* Result.framework */,
+				8CD34D4D1CEB714F004ED523 /* ReactiveCocoa.framework */,
 				8CD34D1E1CEB706B004ED523 /* WebBrowserRCSample */,
 				8CD34D331CEB706C004ED523 /* WebBrowserRCSampleTests */,
 				8CD34D3E1CEB706C004ED523 /* WebBrowserRCSampleUITests */,
@@ -99,6 +109,7 @@
 			children = (
 				8CD34D1F1CEB706B004ED523 /* AppDelegate.swift */,
 				8CD34D211CEB706B004ED523 /* ViewController.swift */,
+				8C16CA951CF1ACED005065C7 /* ViewModel.swift */,
 				8CD34D231CEB706B004ED523 /* Main.storyboard */,
 				8CD34D261CEB706B004ED523 /* Assets.xcassets */,
 				8CD34D281CEB706B004ED523 /* LaunchScreen.storyboard */,
@@ -135,6 +146,7 @@
 				8CD34D181CEB706B004ED523 /* Sources */,
 				8CD34D191CEB706B004ED523 /* Frameworks */,
 				8CD34D1A1CEB706B004ED523 /* Resources */,
+				8CD34D511CEB716F004ED523 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -251,12 +263,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8CD34D511CEB716F004ED523 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8CD34D181CEB706B004ED523 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8CD34D221CEB706B004ED523 /* ViewController.swift in Sources */,
+				8C16CA961CF1ACEE005065C7 /* ViewModel.swift in Sources */,
 				8CD34D201CEB706B004ED523 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +430,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WebBrowserRCSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.blogspot.rnsm504.WebBrowserRCSample;
@@ -410,6 +445,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WebBrowserRCSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.blogspot.rnsm504.WebBrowserRCSample;
@@ -482,6 +521,7 @@
 				8CD34D461CEB706C004ED523 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8CD34D471CEB706C004ED523 /* Build configuration list for PBXNativeTarget "WebBrowserRCSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +530,7 @@
 				8CD34D491CEB706C004ED523 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8CD34D4A1CEB706C004ED523 /* Build configuration list for PBXNativeTarget "WebBrowserRCSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +539,7 @@
 				8CD34D4C1CEB706C004ED523 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
