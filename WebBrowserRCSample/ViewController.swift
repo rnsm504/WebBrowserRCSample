@@ -13,17 +13,9 @@ import Result
 class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
 
     @IBOutlet weak var urlField: UITextField!
-//    @IBOutlet weak var myBrowser: UIWebView!
-    
-    
     @IBOutlet weak var myWebView: UIWebView!
     
     var vm : ViewModel = ViewModel()
-    private var resultUrl : NSURL!
-    private var returnKey : Bool = false
-    
-    private var url : NSURL!
-    private var result : MutableProperty<String> = MutableProperty("")
     
     var cocoaAction : CocoaAction!
     
@@ -34,29 +26,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
         self.urlField.delegate = self
         self.myWebView.delegate = self
         
-        vm.action3!.values.observeNext { value in
+        vm.action!.values.observeNext { value in
             print(value.absoluteString)
-//            self.myLabel.text = "sasa"
-            
             self.myWebView.loadRequest(NSURLRequest(URL: value))
         }
         
-
-
-//                let a  = urlField.rac_textSignal()
-//                    .toSignalProducer()
-//                    .flatMapError{
-//                        error in return SignalProducer<AnyObject?, NoError>.empty
-//                    }
-////                    .filter({ value -> Bool in
-////                        return self.returnKey
-////                    })
-////                    .concat(SignalProducer<AnyObject?, NoError>)
-//                    .map {
-//                        text in
-//                        text as! String
-//                    }
-//                vm.urlText <~ a
         
         let a = self.urlField.rac_signalForControlEvents(.EditingDidEndOnExit)
             .toSignalProducer()
@@ -66,14 +40,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
             .map { value -> String in
                  self.urlField.text!
         }
-
-        
         vm.urlText <~ a
-        cocoaAction = CocoaAction(vm.action3, input: self.urlField.text!)
-////        cocoaAction = CocoaAction(vm.action2, input: "")
-//        
-////        urlField.addTarget(vm.action3, action: CocoaAction.selector, forControlEvents: .EditingDidEndOnExit)
-//  
+        
+        cocoaAction = CocoaAction(vm.action, input: self.urlField.text!)
         urlField.addTarget(cocoaAction, action: CocoaAction.selector, forControlEvents: .EditingDidEndOnExit)
         
     }
