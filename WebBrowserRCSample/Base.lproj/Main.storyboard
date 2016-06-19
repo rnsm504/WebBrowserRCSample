@@ -22,13 +22,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIo-AV-LxM">
-                                <rect key="frame" x="20" y="76" width="560" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QgU-iR-fTt">
+                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QgU-iR-fTt">
                                 <rect key="frame" x="20" y="104" width="560" height="488"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
@@ -39,16 +33,11 @@
                             <constraint firstItem="zsB-sA-2fG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="D0g-At-t53"/>
                             <constraint firstItem="zsB-sA-2fG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="E6U-5S-2bQ"/>
                             <constraint firstItem="QgU-iR-fTt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="UNw-AA-2Yo"/>
-                            <constraint firstAttribute="trailing" secondItem="zIo-AV-LxM" secondAttribute="trailing" constant="20" id="X6l-YX-Keh"/>
-                            <constraint firstItem="zIo-AV-LxM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="acY-cW-kkM"/>
                             <constraint firstAttribute="trailing" secondItem="QgU-iR-fTt" secondAttribute="trailing" constant="20" id="c7U-OY-qjZ"/>
-                            <constraint firstItem="zIo-AV-LxM" firstAttribute="top" secondItem="zsB-sA-2fG" secondAttribute="bottom" constant="18" id="fYW-OX-ebY"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QgU-iR-fTt" secondAttribute="bottom" constant="8" id="nUV-J0-Th9"/>
-                            <constraint firstItem="QgU-iR-fTt" firstAttribute="top" secondItem="zIo-AV-LxM" secondAttribute="bottom" constant="7.5" id="rjy-Gw-NNX"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="myLabel" destination="zIo-AV-LxM" id="hZy-Kx-DJn"/>
                         <outlet property="myWebView" destination="QgU-iR-fTt" id="0SE-XS-J88"/>
                         <outlet property="urlField" destination="zsB-sA-2fG" id="d9r-Dt-tgC"/>
                     </connections>
